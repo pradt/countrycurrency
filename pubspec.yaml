@@ -2,8 +2,8 @@ name: countrycurrency
 description: A simple package to provide currencies around the world for your app. 
 version: 0.0.1
 author: Pratheepan Thevadasan
-homepage: 
-
+homepage: https://github.com/pradt/countrycurrency
+repository: https://github.com/pradt/countrycurrency
 environment:
   sdk: ">=2.7.0 <3.0.0"
 
