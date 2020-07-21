@@ -2,4 +2,4 @@
 
 * Inital Release - :)
 
-* Added JSON Econde and Decode functions so that the object can serialised and deserialised.
+* 0.0.2 - Added JSON Econde and Decode functions so that the object can serialised and deserialised.
