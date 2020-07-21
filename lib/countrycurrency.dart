@@ -20,6 +20,32 @@ class CountryCurrency{
     this.namePlural
   });
 
+factory CountryCurrency.fromDoc(Map<String, dynamic> data){
+    return CountryCurrency(
+      code: data['code'] != null ? data['code'] : "",
+      decimalDigits: data['decimaldigits'] != null ? int.parse(data['code']) : 0,
+      name: data['name'] != null ? data['name'] : "",
+      namePlural: data['nameplural'] != null ? data['nameplural'] : "",
+      rounding: data['rounding'] != null ? double.parse(data['rounding']) : 0,
+      symbol: data['symbol'] != null ? data['symbol'] : "",
+      symbolNative: data['symbolnative'] != null ? data['symbolnative'] : ""
+      );
+  }
+
+  Map<String, dynamic> toJson() =>
+  {
+    "code": code,
+    "decimaldigits": decimalDigits.toString(),
+    "name": name,
+    "nameplural": namePlural,
+    "rounding": rounding.toString(),
+    "symbol" : symbol,
+    "symbolnative" : symbolNative,
+    
+  };
+
+
+
 }
 
 final List<CountryCurrency> currencyCodes = 
@@ -1096,3 +1122,5 @@ final List<CountryCurrency> currencyCodes =
     namePlural: "Zimbabwean Dollar"
   )
 ];
+
+
