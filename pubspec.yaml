@@ -5,7 +5,7 @@ author: Pratheepan Thevadasan
 homepage: https://github.com/pradt/countrycurrency
 repository: https://github.com/pradt/countrycurrency
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.0.0 <3.0.0"
 
 dependencies:
   flutter:
