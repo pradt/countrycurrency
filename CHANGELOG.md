@@ -5,3 +5,4 @@
 * 0.0.2 - Added JSON Econde and Decode functions so that the object can serialised and deserialised.
 * 0.0.3 - Added Shell Script to automatically push to pub.dev once commited.
 * 0.0.4 - Testing the automatic publish
+* 0.0.5 - fromDoc is now fromMap to reflect that the factory method is taking in Map, the toJson methods no longer outputs int and doubles as string, and likewise the new fromMap no longer parses the value as either an int or double. 

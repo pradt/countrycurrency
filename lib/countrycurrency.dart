@@ -20,13 +20,13 @@ class CountryCurrency{
     this.namePlural
   });
 
-factory CountryCurrency.fromDoc(Map<String, dynamic> data){
+factory CountryCurrency.fromMap(Map<String, dynamic> data){
     return CountryCurrency(
       code: data['code'] != null ? data['code'] : "",
-      decimalDigits: data['decimaldigits'] != null ? int.parse(data['code']) : 0,
+      decimalDigits: data['decimaldigits'] != null ? data['code'] : 0,
       name: data['name'] != null ? data['name'] : "",
       namePlural: data['nameplural'] != null ? data['nameplural'] : "",
-      rounding: data['rounding'] != null ? double.parse(data['rounding']) : 0,
+      rounding: data['rounding'] != null ? data['rounding'] : 0,
       symbol: data['symbol'] != null ? data['symbol'] : "",
       symbolNative: data['symbolnative'] != null ? data['symbolnative'] : ""
       );
@@ -35,10 +35,10 @@ factory CountryCurrency.fromDoc(Map<String, dynamic> data){
   Map<String, dynamic> toJson() =>
   {
     "code": code,
-    "decimaldigits": decimalDigits.toString(),
+    "decimaldigits": decimalDigits,
     "name": name,
     "nameplural": namePlural,
-    "rounding": rounding.toString(),
+    "rounding": rounding,
     "symbol" : symbol,
     "symbolnative" : symbolNative,
     
