@@ -23,7 +23,7 @@ class CountryCurrency{
 factory CountryCurrency.fromMap(Map<String, dynamic> data){
     return CountryCurrency(
       code: data['code'] != null ? data['code'] : "",
-      decimalDigits: data['decimaldigits'] != null ? data['code'] : 0,
+      decimalDigits: data['decimaldigits'] != null ? data['decimaldigits'] : 0,
       name: data['name'] != null ? data['name'] : "",
       namePlural: data['nameplural'] != null ? data['nameplural'] : "",
       rounding: data['rounding'] != null ? data['rounding'] : 0,
