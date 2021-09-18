@@ -7,3 +7,4 @@
 * 0.0.4 - Testing the automatic publish
 * 0.0.5 - fromDoc is now fromMap to reflect that the factory method is taking in Map, the toJson methods no longer outputs int and doubles as string, and likewise the new fromMap no longer parses the value as either an int or double. 
 * 0.0.6 - Left a typo 
+* 0.0.7 - Added a factory method to allow you to easily generate a CountryCurrency Object using a country code as a String

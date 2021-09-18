@@ -20,6 +20,8 @@ class CountryCurrency{
     this.namePlural
   });
 
+/// Factory method to generate a CountryCurrency Object using a Map
+/// Often this would be used when you need to generate the object form JSON
 factory CountryCurrency.fromMap(Map<String, dynamic> data){
     return CountryCurrency(
       code: data['code'] != null ? data['code'] : "",
@@ -32,6 +34,7 @@ factory CountryCurrency.fromMap(Map<String, dynamic> data){
       );
   }
 
+  /// Method to return a JSON representation of the Object
   Map<String, dynamic> toJson() =>
   {
     "code": code,
@@ -44,7 +47,24 @@ factory CountryCurrency.fromMap(Map<String, dynamic> data){
     
   };
 
+/// Factory method to generate a CountryCurrency object using a currency code
+/// If parameter is passed as an empty string, the code will be defaulted to USD
+/// 
+/// You can utilise this method to hydrate an object by a code if you didn't want to save whole object
+factory CountryCurrency.findByCountryCode(String _code)
+{
+  if(_code == "")
+  {
+    _code = "USD"; 
 
+  }
+
+  CountryCurrency currency = currencyCodes.firstWhere((element) => element.code == _code);
+
+  return currency;
+
+
+}
 
 }
 
